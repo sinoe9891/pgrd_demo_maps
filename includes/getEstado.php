@@ -15,7 +15,7 @@
 	if($resultado=$mysqli->query($query))
 	{
 		?>
-		<option value="" >Seleccione un País</option>
+		<option value="" >Área Cobertura Región PGRD COPECO</option>
 
 		<?php
 		while($row = $resultado->fetch_assoc())

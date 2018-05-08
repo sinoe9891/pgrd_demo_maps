@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.0
+-- version 4.7.7
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: May 08, 2018 at 03:39 PM
--- Server version: 10.1.31-MariaDB
--- PHP Version: 7.2.4
+-- Host: localhost
+-- Generation Time: May 08, 2018 at 11:39 PM
+-- Server version: 10.1.30-MariaDB
+-- PHP Version: 5.6.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -68,9 +68,6 @@ CREATE TABLE `pst-detalle` (
 INSERT INTO `pst-detalle` (`id-pst`, `id-dtll`, `id-rb`) VALUES
 (1, 1, 22),
 (2, 1, 8),
-(3, 1, 8),
-(4, 1, 15),
-(18, 1, 8),
 (19, 1, 25);
 
 -- --------------------------------------------------------
@@ -91,29 +88,8 @@ CREATE TABLE `pst-empresa` (
 
 INSERT INTO `pst-empresa` (`emp-id`, `emp-nom`, `emp-dsc`) VALUES
 (1, 'AgriContato', 'EMP'),
-(2, 'Barry Callebaut', 'EMP'),
-(3, 'Barry Callebaut', 'EMP'),
-(4, 'Brownbreeding', 'EMP'),
-(5, 'Fincas Jarquin', 'EMP'),
-(6, 'Galloway Cattle Co', 'EMP'),
-(7, 'Kasetsart University (KU)', 'EMP'),
-(8, 'Smithfield', 'EMP'),
-(9, 'Univ de Lleyda', 'EMP'),
-(10, 'Univ of Connecticut (UCONN)', 'EMP'),
-(11, 'Univ of Tennessee (UTIA)', 'EMP'),
-(12, 'CEICKOR', 'EMP'),
-(13, 'Cooperativa Agricola Vitivinicola Loncomilla Ltda.', 'EMP'),
-(14, 'Oregon State University', 'EMP'),
-(15, 'Everglades Research and Education Center (EREC) - University of Florida (UF)', 'EMP'),
-(16, 'University of Udine', 'EMP'),
-(17, 'Utah State University', 'EMP'),
-(18, 'Energypalma, S.A.', 'EMP'),
-(19, 'Cria Fertil', 'EMP'),
-(20, 'Ganaderia La Judea S.A.', 'EMP'),
-(21, 'Salmor, S.A.', 'EMP'),
-(22, 'Corporacion Montelimar', 'EMP'),
-(23, 'Universidad Veraruzana', 'EMP'),
-(24, 'Universidad Autonoma de Yucatan', 'EMP');
+(2, 'Barry Callebaut1', 'EMP'),
+(19, 'Cria Fertil', 'EMP');
 
 -- --------------------------------------------------------
 
@@ -132,11 +108,7 @@ CREATE TABLE `pst-inter-emp-cv` (
 --
 
 INSERT INTO `pst-inter-emp-cv` (`id-emp`, `id-cv`, `id-pais`) VALUES
-(2, 1, 1),
-(2, 1, 2),
-(3, 1, 2),
-(4, 2, 3),
-(18, 6, 3);
+(2, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -156,12 +128,7 @@ CREATE TABLE `pst-inter-emp-pais` (
 INSERT INTO `pst-inter-emp-pais` (`emp-pais-id`, `emp-id`) VALUES
 (1, 1),
 (1, 2),
-(1, 9),
-(1, 19),
-(2, 2),
-(2, 3),
-(3, 4),
-(3, 18);
+(1, 19);
 
 -- --------------------------------------------------------
 
@@ -181,10 +148,7 @@ CREATE TABLE `pst-inter-pais-rubro` (
 INSERT INTO `pst-inter-pais-rubro` (`pais-id`, `rubro-id`) VALUES
 (1, 8),
 (1, 22),
-(1, 25),
-(2, 8),
-(3, 8),
-(3, 15);
+(1, 25);
 
 -- --------------------------------------------------------
 
@@ -202,34 +166,9 @@ CREATE TABLE `pst-inter-rb-emp` (
 --
 
 INSERT INTO `pst-inter-rb-emp` (`id-rb`, `id-emp`) VALUES
-(5, 15),
-(7, 10),
 (8, 2),
-(8, 3),
-(8, 13),
-(8, 18),
-(8, 22),
-(10, 12),
-(15, 4),
-(15, 7),
-(17, 9),
-(17, 16),
 (22, 1),
-(22, 6),
-(22, 24),
-(23, 5),
-(23, 14),
-(23, 17),
-(23, 21),
-(23, 23),
-(23, 24),
-(24, 24),
-(25, 19),
-(26, 24),
-(27, 11),
-(28, 8),
-(29, 24),
-(30, 20);
+(25, 19);
 
 -- --------------------------------------------------------
 
@@ -263,7 +202,7 @@ CREATE TABLE `pst-pasantia` (
   `pst-pais-id` int(11) NOT NULL,
   `pst-emp-id` int(4) NOT NULL,
   `pst-anio` text COLLATE latin1_spanish_ci NOT NULL,
-  `pst-doc-id` varchar(9) COLLATE latin1_spanish_ci NOT NULL
+  `pst-doc-id` varchar(20) COLLATE latin1_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
 
 --
@@ -271,12 +210,9 @@ CREATE TABLE `pst-pasantia` (
 --
 
 INSERT INTO `pst-pasantia` (`pst-id`, `pst-pais-id`, `pst-emp-id`, `pst-anio`, `pst-doc-id`) VALUES
-(1, 1, 1, '2016', 'Bra-001'),
-(2, 1, 2, '2016', 'Bra-002'),
-(3, 2, 3, '2016', 'Ind-001'),
-(4, 3, 4, '2016', 'Ecu-001'),
-(18, 3, 18, '2016', 'Ecu-002'),
-(19, 1, 19, '2016', 'Bra-003');
+(1, 1, 1, '2016', 'ElNegrito-002'),
+(2, 1, 2, '2018', 'ElProgreso-001'),
+(19, 1, 19, '2016', 'ElNegrito-003');
 
 -- --------------------------------------------------------
 
@@ -297,15 +233,15 @@ CREATE TABLE `pst-rubro` (
 
 INSERT INTO `pst-rubro` (`rb-id`, `rb-nom`, `rd-dsc`, `rb-at`) VALUES
 (1, 'Agricultura Organica', 'AOrg', 1),
-(2, 'Centro de Innovacion de Frutas y Hortalizas', 'CIFH', 1),
-(3, 'Control Biologico', 'CB', 1),
-(4, 'Cultivo de Tejidos', 'CT', 1),
-(5, 'Entomologia', 'Ent', 1),
-(6, 'Fitomejoramiento', 'FM', 1),
-(7, 'Fitopatologia', 'FP', 1),
-(8, 'Frutales', 'Frut', 1),
-(9, 'Granos y Semillas', 'GyS', 1),
-(10, 'Manejo Integrado de Cultivos', 'MIC', 1),
+(2, 'Centro de Innovacion de Frutas y Hortalizas', 'CIFH', 2),
+(3, 'Control Biologico', 'CB', 3),
+(4, 'Cultivo de Tejidos', 'CT', 4),
+(5, 'Entomologia', 'Ent', 5),
+(6, 'Fitomejoramiento', 'FM', 6),
+(7, 'Fitopatologia', 'FP', 7),
+(8, 'Área 1', 'Frut', 3),
+(9, 'Área 2', 'GyS', 3),
+(10, 'Área 3', 'MIC', 3),
 (11, 'Manejo Integrado de Plagas', 'MIP', 1),
 (12, 'Maquinaria y Riegos', 'MyR', 1),
 (13, 'Olericultura Intensiva', 'OInt', 1),
@@ -317,10 +253,10 @@ INSERT INTO `pst-rubro` (`rb-id`, `rb-nom`, `rd-dsc`, `rb-at`) VALUES
 (19, 'Apicultura', 'Ap', 2),
 (20, 'Avicultura', 'Av', 2),
 (21, 'Ganado Caprino', 'GCap', 2),
-(22, 'Ganado de Carne', 'GCar', 2),
+(22, 'Área 2', 'GCar', 2),
 (23, 'Ganado Lechero', 'GL', 2),
 (24, 'Ganado Ovino', 'GO', 2),
-(25, 'Inseminacion Artificial', 'InsArt', 2),
+(25, 'Área 3', 'InsArt', 2),
 (26, 'Mejoramiento y Genetica', 'MyG', 2),
 (27, 'Nutricion Animal', 'NA', 2),
 (28, 'Porcinocultura', 'Porc', 2),
@@ -369,7 +305,8 @@ ALTER TABLE `pst-inter-emp-pais`
 -- Indexes for table `pst-inter-pais-rubro`
 --
 ALTER TABLE `pst-inter-pais-rubro`
-  ADD PRIMARY KEY (`pais-id`,`rubro-id`);
+  ADD PRIMARY KEY (`pais-id`,`rubro-id`),
+  ADD KEY `rubro-id` (`rubro-id`);
 
 --
 -- Indexes for table `pst-inter-rb-emp`
@@ -444,6 +381,13 @@ ALTER TABLE `pst-inter-emp-cv`
 ALTER TABLE `pst-inter-emp-pais`
   ADD CONSTRAINT `pst-inter-emp-pais_ibfk_1` FOREIGN KEY (`emp-pais-id`) REFERENCES `pst-pais` (`pais-id`),
   ADD CONSTRAINT `pst-inter-emp-pais_ibfk_2` FOREIGN KEY (`emp-id`) REFERENCES `pst-empresa` (`emp-id`);
+
+--
+-- Constraints for table `pst-inter-pais-rubro`
+--
+ALTER TABLE `pst-inter-pais-rubro`
+  ADD CONSTRAINT `pst-inter-pais-rubro_ibfk_1` FOREIGN KEY (`pais-id`) REFERENCES `pst-pais` (`pais-id`),
+  ADD CONSTRAINT `pst-inter-pais-rubro_ibfk_2` FOREIGN KEY (`rubro-id`) REFERENCES `pst-rubro` (`rb-id`);
 
 --
 -- Constraints for table `pst-inter-rb-emp`

@@ -28,7 +28,7 @@ if ($id_rubro==4 or $id_rubro==6 or $id_rubro==8 or $id_rubro==15 or $id_rubro==
 																		echo 'El Progreso';
 																	}
 																	if($row['rb-at']==2){
-																		echo "Zootecnia";
+																		echo "El Negrito";
 																	}
 																	if($row['rb-at']==4){
 																		echo "Zootecnia1";
@@ -65,7 +65,7 @@ if ($id_rubro==4 or $id_rubro==6 or $id_rubro==8 or $id_rubro==15 or $id_rubro==
 
 		?>
 
-		<h4>Pasantías Disponibles</h4>
+		<h4>Mapa de Proyectos</h4>
 
 			<?php
 			while($row = $resultado->fetch_assoc())
@@ -74,9 +74,17 @@ if ($id_rubro==4 or $id_rubro==6 or $id_rubro==8 or $id_rubro==15 or $id_rubro==
         <div class="col s12 m4 l4">
           <div class="card z-depth-2">
             <div class="card-content ">
-              <span class="card-title">Proyecto ID: <?php echo $row['pst-doc-id']; ?></span>
+              <span class="card-title">Proyecto ID: <?php echo $row['pst-doc-id']; print_r ($row); ?></span>
 				<p>País: <?php echo $row['pais-nom']; ?></p>
-				<p>Municipio: <?php  if($row['rb-at']==1){echo 'Fitotecnia';}elseif($row['rb-at']==2){echo "Zootecnia";}?></p>
+				<p>Municipio: <?php  if($row['rb-at']==3){
+												echo 'El Progreso';
+											}
+											if($row['rb-at']==2){
+												echo "El Negrito";
+											}
+											if($row['rb-at']==4){
+												echo "El Negrito";
+											}?></p>
 				<p>Rubro: <?php echo $row['rb-nom']." (". $row['rd-dsc'].")" ; ?></p>
 				<p>Empresa: <?php echo $row['emp-nom']; ?></p>
 

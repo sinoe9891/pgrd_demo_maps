@@ -22,7 +22,7 @@ if ($id_rubro==4 or $id_rubro==6 or $id_rubro==8 or $id_rubro==15 or $id_rubro==
 		<div class="col s12 m4 l4">
           <div class="card">
             <div class="card-content ">
-              <span class="card-title">Proyecto ID: <?php echo $row['pst-doc-id']; print_r ($row);?></span>
+              <span class="card-title">Proyecto ID: <?php echo $row['pst-doc-id']; ?></span>
 				<p>País: <?php echo $row['pais-nom']; ?></p>
 				<p>Municipio: <?php  if($row['rb-at']==3){
 																		echo 'El Progreso';
@@ -36,10 +36,11 @@ if ($id_rubro==4 or $id_rubro==6 or $id_rubro==8 or $id_rubro==15 or $id_rubro==
 				<p>Rubro: <?php echo $row['rb-nom']." (". $row['rd-dsc'].")" ; ?></p>
 				<p>Cultivo: <?php echo $row['ctv-nom']; ?></p>
 				<p>Empresa: <?php echo $row['emp-nom']; ?></p>
+				<p>Mapa:</p></br><img src="img/<?php echo $row['pst-doc-id']; ?>.jpg" width="800">
 
             </div>
             <div class="card-action">
-	            <a class="waves-effect waves-light btn-large ripple-effect" target="_blank" style="background-color:#e8ac35" href="docs/<?php echo $row['pst-doc-id']; ?>.pdf"><i class="material-icons right">library_books</i>Información de Proyecto</a>
+	            <a class="waves-effect waves-light btn-large ripple-effect" target="_blank" style="background-color:#e8ac35" href="img/<?php echo $row['pst-doc-id']; ?>.jpg"><i class="material-icons right">library_books</i>Información de Proyecto</a>
 	        </div>
 
           </div>
@@ -74,7 +75,7 @@ if ($id_rubro==4 or $id_rubro==6 or $id_rubro==8 or $id_rubro==15 or $id_rubro==
         <div class="col s12 m4 l4">
           <div class="card z-depth-2">
             <div class="card-content ">
-              <span class="card-title">Proyecto ID: <?php echo $row['pst-doc-id']; print_r ($row); ?></span>
+              <span class="card-title">Proyecto ID: <?php echo $row['pst-doc-id']; ?></span>
 				<p>País: <?php echo $row['pais-nom']; ?></p>
 				<p>Municipio: <?php  if($row['rb-at']==3){
 												echo 'El Progreso';
@@ -87,10 +88,11 @@ if ($id_rubro==4 or $id_rubro==6 or $id_rubro==8 or $id_rubro==15 or $id_rubro==
 											}?></p>
 				<p>Rubro: <?php echo $row['rb-nom']." (". $row['rd-dsc'].")" ; ?></p>
 				<p>Empresa: <?php echo $row['emp-nom']; ?></p>
+				<p>Mapa:</p></br><img src="img/<?php echo $row['pst-doc-id']; ?>.jpg" width="800" >
 
             </div>
             <div class="card-action">
-	            <a class="waves-effect waves-light btn btn-large ripple-effect" target="_blank" style="background-color:#e8ac35" href="docs/<?php echo $row['pst-doc-id']; ?>.pdf"><i class="material-icons right">library_books</i>Información de Proyecto</a>
+	            <a class="waves-effect waves-light btn btn-large ripple-effect" target="_blank" style="background-color:#e8ac35" href="img/<?php echo $row['pst-doc-id']; ?>.jpg"><i class="material-icons right">library_books</i>Información de Proyecto</a>
 	        </div>
 
           </div>

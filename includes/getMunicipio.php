@@ -4,8 +4,8 @@
 
 // obtener area tematica
 	echo '<select  onchange="getrubro(this.value, cbx_pais.value);" name="cbx_areatematica" id="cbx_areatematica" placeholder="Seleccione Municipio">		<option value="">Seleccione Municipio</option>
-			<option value="2">El Negrito</option>
-			<option value="3">El Progreso</option>
+			<option value="2">El Progreso</option>
+			<option value="3">El Negrito</option>
 
 		</select>';
 

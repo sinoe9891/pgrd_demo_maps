@@ -1,105 +1,53 @@
 <html>
-	<head>
-		<meta charset="utf-8" />
-		    <meta http-equiv="Content-Type" content="text/html; charset=utf-8_spanish_ci" />
-		    <title>Pasantías | Universidad Zamorano</title>
-		    <link rel="icon" href="./img/favicon.png" type="image/x-icon" />
-        <link rel="stylesheet" type="text/css" href="css/materialize/css/materialize.min.css">
-          <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-        <script src="includes/js.js"></script>
-        <style type="text/css">
-            body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-  }
-
-  main {
-    flex: 1 0 auto;
-  }
-
-  footer.page-footer {
-
-    background-color: #931919;
-}
-nav {
-    background-color: #008341;
-}
-
-        </style>
-
-		<!--  <link rel="stylesheet" href="css/style.css">-->
-	</head>
-
+	<?php require_once('includes/header.php'); ?>
 
 	<body onload="getEstado();">
-
-
-      <nav style="height: 150px">
-    <div class="nav-wrapper">
-      <a href="#!" class="brand-logo center">
-      <img  src="img/logos-deptos-Blancos-10.png">
-      </a>
-    </div>
-  </nav>
-
-
-
-
-  <main class="container">
-    <div>
-	    <div class="row">
-	      <div class="col s12 m12 l12">
-					<h4 align="center">PGRD <?php echo date('Y'); ?></h4>
-				</div>
+	  <main class="container">
+	    <div>
+		    <div class="row">
+		      <div class="col s12 m12 l12">
+						<h4 align="center">PGRD <?php echo date('Y'); ?></h4>
+					</div>
+		    </div>
+				<div class="input-field col s12  m12 l6">
+				<div class="card">
+					<div class="card-content">
+					<span class="card-title">Escoge una opción</span>
+		        <form name="form1" action="">
+		        <div class="row">
+		          <div class="input-field col s4 m12 l4" id="estadoList"></div>
+		          <div class="input-field col s4 m12 l4" id="municipioList"></div>
+		          <div class="input-field col s4  m12 l4" id="rubroList"></div>
+		    		</div>
+		          <div class="input-field col s12  m12 l6" id="pasantiaList"></div>
+		      </form>
 	    </div>
-			<div class="input-field col s12  m12 l6">
-			<div class="card">
-				<div class="card-content">
-				<span class="card-title">Escoge una opción</span>
-	        <form name="form1" action="">
-	        <div class="row">
-	          <div class="input-field col s4 m12 l4" id="estadoList"></div>
-	          <div class="input-field col s4 m12 l4" id="municipioList"></div>
-	          <div class="input-field col s4  m12 l4" id="rubroList"></div>
-	    		</div>
-	          <div class="input-field col s12  m12 l6" id="pasantiaList"></div>
-	      </form>
-    </div>
-		</div>
-		</div>
-		</div>
-  </main>
+			</div>
+			</div>
+			</div>
+	  </main>
+<!-- Footer -->
+		<?php require_once('includes/footer.php'); ?>
 
-
-<footer class="page-footer">
-          <div class="container">
-            <div class="row">
-              <div class="col l6 s12">
-                <a class="grey-text text-lighten-3" href="#!"><h5 class="white-text">Universidad Zamorano</h5>
-                <p class="grey-text text-lighten-4">Comprometidos a Alimentar el Mundo</p></a>
-              </div>
-              <div class="col l4 offset-l2 s12">
-
-                <ul>
-                  <li><a class="grey-text text-lighten-3" href="#!">Login</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Zamomail</a></li>
-
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="footer-copyright">
-            <div class="container">
-            © 2016 Copyright CPA, Universidad Zamorano.
-
-            </div>
-          </div>
-        </footer>
-         <script type="text/javascript" src="css/materialize/js/materialize.min.js" ></script>
+  <script type="text/javascript" src="css/materialize/js/materialize.min.js" ></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
+	<!-- PGRD -->
+	<script type='text/javascript' src='https://creativehonduras.com/pgrd.copeco.gob.hn/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=4.9.2'></script>
+	<script type='text/javascript' src='includes/js/jquery/ui/core.min.js?ver=1.11.4'></script>
+	<script type='text/javascript' src='includes/js/jquery/ui/widget.min.js?ver=1.11.4'></script>
+	<script type='text/javascript' src='includes/js/jquery/ui/mouse.min.js?ver=1.11.4'></script>
+	<script type='text/javascript' src='includes/js/jquery/ui/sortable.min.js?ver=1.11.4'></script>
+	<script type='text/javascript' src='includes/js/jquery/ui/tabs.min.js?ver=1.11.4'></script>
+	<script type='text/javascript' src='includes/js/jquery/ui/accordion.min.js?ver=1.11.4'></script>
+	<script type='text/javascript' src='includes/js/plugins.js?ver=16.3'></script>
+	<script type='text/javascript' src='includes/js/menu.js?ver=16.3'></script>
+	<script type='text/javascript' src='includes/assets/animations/animations.min.js?ver=16.3'></script>
+	<script type='text/javascript' src='includes/assets/jplayer/jplayer.min.js?ver=16.3'></script>
+	<script type='text/javascript' src='includes/js/parallax/translate3d.js?ver=16.3'></script>
+	<script type='text/javascript' src='includes/js/scripts.js?ver=16.3'></script>
+	<script type='text/javascript' src='includes/js/comment-reply.min.js?ver=4.9.4'></script>
+	<script type='text/javascript' src='includes/js/wp-embed.min.js?ver=4.9.4'></script>
 
 	</body>
 </html>

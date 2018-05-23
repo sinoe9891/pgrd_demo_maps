@@ -2,7 +2,7 @@
 <nav style="height: 70px;padding-top: 10px; padding-bottom: 10px;">
     <div class="nav-wrapper container">
     <a href="#!" class="brand-logo center">
-        <img width="158"  class"responsive-img" src="img/logo_75.png">
+        <img width="158"  class"responsive-img" src="img/pgrd.png">
 
     </div>
 
@@ -32,7 +32,7 @@
       <ul id="nav-mobile" class="light-blue lighten-1 side-nav">
         <div align="center" class="image_wrapper">
           <p></p>
-          <a href="https://www.zamorano.edu"><img class="scale-with-grid" src="img/logo_75.png" alt="actualizate_" width="158" height="37"></a>
+          <a href="https://www.zamorano.edu"><img width="20px" src="img/pgrd.png"></a>
         </div>
         <li><a href="https://www.zamorano.edu/admisiones">Admisiones</a></li>
         <li><a href="https://www.zamorano.edu/carreras">Carreras</a></li>

@@ -21,7 +21,7 @@
         }
         /* Footer */
         footer.page-footer {
-          background-color: #c3c3c3;
+          background-color: #FFFFFF;
 
         }
         h4 {
@@ -31,9 +31,27 @@
             letter-spacing: 0px;
             color: #0A59A1;
         }
+        .footer_action .one {
+            margin-bottom: 30px;
+            padding-top: 30px;
+            text-align: center;
+            font-size: 110%;
+            line-height: 180%;
+            background: rgba(0,0,0,.1);
+        }
 
          a {
             color: #a8a8a8;
+        }
+        .footer_copy .copyright .padding_fotter{
+            float: left;
+            color: #FFFFFF;
+            height: 82px;
+        }
+        .text-action {
+          text-align: center;
+              font-size: 110%;
+
         }
 
         /* NAV */

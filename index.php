@@ -2,6 +2,7 @@
 	<?php require_once('includes/header.php'); ?>
 
 	<body onload="getEstado();">
+		<?php require_once('includes/nav.php'); ?>
 	  <main class="container">
 	    <div>
 		    <div class="row">
@@ -48,6 +49,7 @@
 	<script type='text/javascript' src='includes/js/scripts.js?ver=16.3'></script>
 	<script type='text/javascript' src='includes/js/comment-reply.min.js?ver=4.9.4'></script>
 	<script type='text/javascript' src='includes/js/wp-embed.min.js?ver=4.9.4'></script>
-
+	<a href="#0" class="cd-top js-cd-top">Top</a>
+	<script src="includes/styles/back-to-top/back-to-top.js"></script>
 	</body>
 </html>

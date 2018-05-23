@@ -22,7 +22,7 @@ if ($id_rubro==4 or $id_rubro==6 or $id_rubro==8 or $id_rubro==15 or $id_rubro==
 		<div class="col s12 m4 l4">
           <div class="card">
             <div class="card-content ">
-              <span class="card-title">Proyecto ID: <?php echo $row['pst-doc-id']; ?></span>
+              <span class="card-title">Proyecto ID: <?php echo $row['pst-doc-id']; print_r($row);?></span>
 				<p>País: <?php echo $row['pais-nom']; ?></p>
 				<p>Municipio: <?php  if($row['rb-at']==3){
 																		echo 'El Progreso';
@@ -75,7 +75,7 @@ if ($id_rubro==4 or $id_rubro==6 or $id_rubro==8 or $id_rubro==15 or $id_rubro==
         <div class="col s12 m4 l4">
           <div class="card z-depth-2">
             <div class="card-content ">
-              <span class="card-title">Proyecto ID: <?php echo $row['pst-doc-id']; ?></span>
+              <span class="card-title">Proyecto ID: <?php echo $row['pst-doc-id']; print_r($row);?></span>
 				<p>País: <?php echo $row['pais-nom']; ?></p>
 				<p>Municipio: <?php  if($row['rb-at']==3){
 												echo 'El Progreso';

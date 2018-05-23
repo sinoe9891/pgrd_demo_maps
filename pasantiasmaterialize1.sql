@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.7
+-- version 4.8.0
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: May 08, 2018 at 11:39 PM
--- Server version: 10.1.30-MariaDB
--- PHP Version: 5.6.33
+-- Host: 127.0.0.1
+-- Generation Time: May 23, 2018 at 05:06 PM
+-- Server version: 10.1.31-MariaDB
+-- PHP Version: 5.6.35
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -68,7 +68,9 @@ CREATE TABLE `pst-detalle` (
 INSERT INTO `pst-detalle` (`id-pst`, `id-dtll`, `id-rb`) VALUES
 (1, 1, 22),
 (2, 1, 8),
-(19, 1, 25);
+(19, 1, 25),
+(25, 1, 9),
+(26, 0, 19);
 
 -- --------------------------------------------------------
 
@@ -108,7 +110,8 @@ CREATE TABLE `pst-inter-emp-cv` (
 --
 
 INSERT INTO `pst-inter-emp-cv` (`id-emp`, `id-cv`, `id-pais`) VALUES
-(2, 1, 1);
+(2, 1, 1),
+(2, 4, 1);
 
 -- --------------------------------------------------------
 
@@ -147,6 +150,8 @@ CREATE TABLE `pst-inter-pais-rubro` (
 
 INSERT INTO `pst-inter-pais-rubro` (`pais-id`, `rubro-id`) VALUES
 (1, 8),
+(1, 9),
+(1, 19),
 (1, 22),
 (1, 25);
 
@@ -167,6 +172,8 @@ CREATE TABLE `pst-inter-rb-emp` (
 
 INSERT INTO `pst-inter-rb-emp` (`id-rb`, `id-emp`) VALUES
 (8, 2),
+(9, 1),
+(19, 19),
 (22, 1),
 (25, 19);
 
@@ -210,9 +217,11 @@ CREATE TABLE `pst-pasantia` (
 --
 
 INSERT INTO `pst-pasantia` (`pst-id`, `pst-pais-id`, `pst-emp-id`, `pst-anio`, `pst-doc-id`) VALUES
-(1, 1, 1, '2016', 'ElNegrito-002'),
-(2, 1, 2, '2018', 'ElProgreso-001'),
-(19, 1, 19, '2016', 'ElNegrito-003');
+(1, 1, 1, '2016', 'map-02'),
+(2, 1, 2, '2018', 'map-04'),
+(19, 1, 19, '2016', 'map-03'),
+(25, 1, 1, '2018', 'map-04'),
+(26, 1, 19, '2018', 'map-01');
 
 -- --------------------------------------------------------
 
@@ -232,12 +241,12 @@ CREATE TABLE `pst-rubro` (
 --
 
 INSERT INTO `pst-rubro` (`rb-id`, `rb-nom`, `rd-dsc`, `rb-at`) VALUES
-(1, 'Agricultura Organica', 'AOrg', 1),
+(1, 'Agricultura Organica', 'AOrg', 3),
 (2, 'Centro de Innovacion de Frutas y Hortalizas', 'CIFH', 2),
 (3, 'Control Biologico', 'CB', 3),
 (4, 'Cultivo de Tejidos', 'CT', 4),
 (5, 'Entomologia', 'Ent', 5),
-(6, 'Fitomejoramiento', 'FM', 6),
+(6, 'Fitomejoramiento', 'FM', 3),
 (7, 'Fitopatologia', 'FP', 7),
 (8, 'Área 1', 'Frut', 3),
 (9, 'Área 2', 'GyS', 3),
@@ -247,16 +256,16 @@ INSERT INTO `pst-rubro` (`rb-id`, `rb-nom`, `rd-dsc`, `rb-at`) VALUES
 (13, 'Olericultura Intensiva', 'OInt', 1),
 (14, 'Olericultura Extensiva', 'OExt', 1),
 (15, 'Ornamentales', 'Orn', 1),
-(16, 'Sanidad Vegetal', 'SV', 1),
+(16, 'Sanidad Vegetal', 'SV', 3),
 (17, 'Suelos', 'Suel', 1),
 (18, 'Acuacultura', 'Ac', 2),
-(19, 'Apicultura', 'Ap', 2),
+(19, 'Área 1', 'Ap', 2),
 (20, 'Avicultura', 'Av', 2),
 (21, 'Ganado Caprino', 'GCap', 2),
 (22, 'Área 2', 'GCar', 2),
 (23, 'Ganado Lechero', 'GL', 2),
 (24, 'Ganado Ovino', 'GO', 2),
-(25, 'Área 3', 'InsArt', 2),
+(25, 'Área 3 zootecnia', 'InsArt', 2),
 (26, 'Mejoramiento y Genetica', 'MyG', 2),
 (27, 'Nutricion Animal', 'NA', 2),
 (28, 'Porcinocultura', 'Porc', 2),
@@ -348,13 +357,13 @@ ALTER TABLE `pst-cultivos`
 -- AUTO_INCREMENT for table `pst-pais`
 --
 ALTER TABLE `pst-pais`
-  MODIFY `pais-id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `pais-id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `pst-pasantia`
 --
 ALTER TABLE `pst-pasantia`
-  MODIFY `pst-id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `pst-id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- Constraints for dumped tables
